@@ -341,12 +341,12 @@
 
 .about-list-item p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 4rem;
   color: #444;
 }
 
 .about-right h2 {
-  font-size: 2rem;
+  font-size: 7rem;
   color: #111;
   margin-bottom: 1rem;
   position: relative;
@@ -358,6 +358,7 @@
   color: #555;
   margin-bottom: 1.5rem;
 }
+
 
 .about-botton {
   background-color:rgb(255, 255, 255);
@@ -515,7 +516,7 @@
   }
 
   .about-botton {
-    width: 100%;
+    width: 40%;
     text-align: center;
   }
 
