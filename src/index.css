@@ -386,7 +386,7 @@
 
 
 
-/*Price Section */
+/* Price Section */
 .pricing-section {
   display: flex;
   flex-wrap: wrap;
@@ -398,7 +398,7 @@
 .pricing-images {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns on desktop */
   gap: 1rem;
 }
 
@@ -420,8 +420,6 @@
   position: relative;
 }
 
-
-
 .pricing-item {
   display: flex;
   justify-content: space-between;
@@ -431,10 +429,16 @@
 }
 
 .price-amount strong {
-  color:chocolate;
+  color: chocolate;
 }
 
 /* Responsive Design for About & Pricing Sections */
+@media (max-width: 1199px) {
+  .pricing-images {
+    grid-template-columns: repeat(3, 1fr); /* Tablet: 3 columns */
+  }
+}
+
 @media (max-width: 1024px) {
   .about-section,
   .pricing-section {
@@ -452,10 +456,6 @@
 
   .about-middle {
     margin: 2rem 0;
-  }
-
-  .pricing-images {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -482,7 +482,7 @@
   }
 
   .pricing-images {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columns */
   }
 
   .pricing-listing h2 {
@@ -496,7 +496,7 @@
 
 @media (max-width: 480px) {
   .pricing-images {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Small phones: 1 column */
   }
 
   .about-list-item {
@@ -518,6 +518,7 @@
     text-align: center;
   }
 }
+
 
 
 
