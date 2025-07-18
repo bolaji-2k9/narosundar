@@ -352,14 +352,6 @@
   position: relative;
 }
 
-.about-right h2::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 4px;
-  background-color: chocolate;
-  margin-bottom: 0.5rem;
-}
 
 .about-right p {
   font-size: 1rem;
@@ -391,6 +383,7 @@
   color:rgb(255, 255, 255);
   text-decoration: none;
 }
+
 
 
 /*Price Section */
@@ -427,14 +420,7 @@
   position: relative;
 }
 
-.pricing-listing h2::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 4px;
-  background-color:chocolate;
-  margin-bottom: 0.5rem;
-}
+
 
 .pricing-item {
   display: flex;
@@ -855,12 +841,6 @@
     border-radius: 6px;
   }
 }
-
-
-
-
-
-
 
 
 
