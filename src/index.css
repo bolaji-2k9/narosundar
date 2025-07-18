@@ -496,8 +496,9 @@
 
 @media (max-width: 480px) {
   .pricing-images {
-    grid-template-columns: 2fr; /* Small phones: 2 column */
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns even on small phones */
   }
+}
 
   .about-list-item {
     flex-direction: row;
