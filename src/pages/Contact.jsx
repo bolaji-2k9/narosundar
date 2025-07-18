@@ -1,5 +1,5 @@
 import React from 'react';
-import contactnaroheader from '../images/main-naro-contact.jpg';
+import contactnaroheader from '../images/naro-barber9.jpg';
 import homeIcon from '../images/home.png';
 
 import emailIcon from '../images/email.png';

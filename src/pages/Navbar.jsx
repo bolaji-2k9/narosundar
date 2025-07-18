@@ -1,25 +1,43 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import narologo from '../images/naro-logo.png'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import naroLogo from '../images/naro-logo.png';
 
 export const Navbar = () => {
-    return (
-        <header className='naro-container'>
-           <img src={narologo} alt="Naro logo" />
-            <nav>
-                <ul className='naro-menu'>
-                    <li><NavLink to = "/" className = 'naro-links'>Home</NavLink></li>
-                    <li><NavLink to = "about" className = 'naro-links'>About</NavLink></li>
-                    <li><NavLink to = "service" className = 'naro-links'>Service</NavLink></li>
-                    <li><NavLink to = "gallery" className = 'naro-links'>Gallery</NavLink></li>
-                    <li><NavLink to = "blog" className = 'naro-links'>Blog</NavLink></li>
-                    <li><NavLink to = "contact" className = 'naro-links'>Contact</NavLink></li>
-                    <li><NavLink to = "fetchingApi" className = 'naro-links'>FetchingApi</NavLink></li>
-<NavLink to="/contact" className='free-quote-btn'>Free Quote</NavLink>
-                </ul>
-                
-            </nav>
+  const [isOpen, setIsOpen] = useState(false);
 
-        </header>
-    )
-}
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <NavLink to="/">
+          <img src={naroLogo} alt="Naro Logo" className="logo-img" />
+        </NavLink>
+      </div>
+
+      <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
+        <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+        <NavLink to="/about" onClick={closeMenu}>About</NavLink>
+        <NavLink to="/service" onClick={closeMenu}>Service</NavLink>
+        <NavLink to="/gallery" onClick={closeMenu}>Gallery</NavLink>
+        <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
+        <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
+        <NavLink to="/contact" className="free-quote-btn" onClick={closeMenu}>
+          Free Quote
+        </NavLink>
+      </div>
+
+      <div className="navbar-toggle" onClick={toggleMenu}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+    </nav>
+  );
+};

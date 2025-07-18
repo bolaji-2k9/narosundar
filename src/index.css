@@ -5,6 +5,79 @@
   font-family: sans-serif;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002040;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Navbar Base */
+.navbar-logo a {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+/* Responsive Style */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    background-color: #000;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links a {
+    margin: 0.5rem 0;
+  }
+}
+
+
+
 
 .free-quote-btn {
   background-color: #e65c00;
@@ -21,96 +94,210 @@
   background-color: #e6cb00; /* darker orange on hover */
 }
 
-.naro-container{
-background-color: #002040;
-height: 70px;
-display: flex;
-justify-content: space-between;
-padding: 0 3rem;
-align-items: center;
+/* Wrapper Background */
+.naro-subbackground {
+  width: 100%;
+  background: #011936;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
-.naro-menu{
-    display: flex;
-    gap: 2rem;
-}
-
-li {
-    list-style-type: none;
-}
-
-.naro-links {
-    text-decoration: none;
-    color: white;
-}
-
-.naro-subbackground{
-  background-color: #002040;
-}
-
-.naro-bluebackground{
-   height: 81vh;
-  background-size: cover;
-    display: flex;
-  color: white;
+/* Main container */
+.naro-bluebackground {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 5rem;
-  margin: 0 1rem;
-  font-size: 30px
-  
+  background: #011936; /* deep navy/blue */
+  border-radius: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.main-naro{
-  width: 820px;        /* Set custom width */
-  height: 620px;       /* Set custom height */
-  }
-
-  .home-botton{
-    background-color: chocolate;
-    height: 55px;
-    width: 200px;
-    padding: 10px 30px;
-    color: azure;
-    transition: 400ms ease-in;
-    
+/* Text content */
+.naro-info {
+  color: white;
+  max-width: 600px;
+  flex: 1;
 }
 
-.home-botton:hover{
-    
-    box-shadow: none;
-    background-color: rgb(255, 132, 0);
+.naro-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.home-buttontext{
+.naro-info p {
+  font-size: 1.2rem;
+}
+
+/* Book Now Button */
+.home-botton {
+  margin-top: 20px;
+}
+
+.home-buttontext {
+  background-color: orange;
   color: white;
   text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.home-buttontext:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* Image block */
+.main-naro {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-naro img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 1024px) {
+  .naro-bluebackground {
+    padding: 30px;
+  }
+
+  .naro-info h1 {
+    font-size: 2rem;
+  }
+
+  .naro-info p {
+    font-size: 1.1rem;
+  }
+
+  .main-naro img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .naro-bluebackground {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .naro-info, .main-naro {
+    width: 100%;
+  }
+
+  .main-naro img {
+    max-width: 100%;
+  }
+
+  .home-buttontext {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .naro-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .naro-info p {
+    font-size: 1rem;
+  }
+
+  .home-buttontext {
+    width: 100%;
+    display: inline-block;
+    padding: 12px;
+  }
 }
 
 
 /*About Section*/
-
-.main-contactnaro{
-  width: 900px;
-  height: 590px;
- padding: 0 8rem;
-
-  }
-
-  .naro-aboutsubbackground{
+.naro-aboutsubbackground {
   background-color: #002040;
-   height: 413px;
+  height: 300px;
+  width: 100%;
 }
 
-.naro-aboutbluebackground{
-   height: 79vh;
+.naro-aboutbluebackground {
+  height: 39vh;
   background-size: cover;
-    display: flex;
+  display: flex;
+  flex-direction: row; /* default desktop layout */
   color: white;
   align-items: center;
+  justify-content: space-between;
   gap: 0rem;
   margin: 0 1.5rem;
-  font-size: 30px
+  font-size: 30px;
+  flex-wrap: wrap;
 }
+
+.naro-info {
+  flex: 1;
+  padding: 1rem;
+}
+
+.naro-info h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.main-aboutnaro {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-aboutnaro img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* === Media Queries for Tablets and Phones === */
+
+@media (max-width: 1024px) {
+  .naro-aboutbluebackground {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .naro-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-aboutnaro img {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .naro-info h1 {
+    font-size: 2rem;
+  }
+
+  .main-aboutnaro img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
 
 
 .about-section {
@@ -261,30 +448,172 @@ li {
   color:chocolate;
 }
 
+/* Responsive Design for About & Pricing Sections */
+@media (max-width: 1024px) {
+  .about-section,
+  .pricing-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-/*service*/
-.naro-servicesubbackground{
-  background-color: #002040;
-   height: 413px;
+  .about-left,
+  .about-right,
+  .pricing-listing {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .about-middle {
+    margin: 2rem 0;
+  }
+
+  .pricing-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.naro-servicebluebackground{
-   height: 79vh;
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-list-item {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .about-right h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-right p {
+    font-size: 0.95rem;
+  }
+
+  .about-botton {
+    margin: 0 auto;
+  }
+
+  .pricing-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-listing h2 {
+    font-size: 1.6rem;
+  }
+
+  .pricing-item {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-images {
+    grid-template-columns: 1fr;
+  }
+
+  .about-list-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-list-item p {
+    font-size: 0.95rem;
+  }
+
+  .about-right h2,
+  .pricing-listing h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-botton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+/*Service Section*/
+.naro-servicesubbackground {
+  background-color: #002040;
+  height: 315px;
+  width: 100%;
+}
+
+.naro-servicebluebackground {
+  height: 40vh;
   background-size: cover;
-    display: flex;
+  display: flex;
+  flex-direction: row; 
   color: white;
   align-items: center;
+  justify-content: space-between;
   gap: 0rem;
   margin: 0 1.5rem;
-  font-size: 30px
+  font-size: 30px;
+  flex-wrap: wrap;
 }
 
-.main-servicenaro{
-  width: 900px;        
-  height: 590px;
- padding: 0 8rem;
+.naro-info {
+  flex: 1;
+  padding: 1rem;
+}
 
+.naro-info h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.main-servicenaro {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-servicenaro img {
+  max-width: 105%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* === Media Queries for Tablets and Phones === */
+
+@media (max-width: 1024px) {
+  .naro-servicebluebackground {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 2rem 1rem;
   }
+
+  .naro-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-servicenaro img {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .naro-info h1 {
+    font-size: 2rem;
+  }
+
+  .main-servicenaro img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
 
 
 
@@ -372,6 +701,12 @@ li {
   border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+  .service-left,
+  .service-right {
+    flex: 1 1 100%;
+  }
+}
 
 
 
@@ -434,55 +769,170 @@ li {
 /*gallery Section*/
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(5, 1fr); /* 5 columns on desktops */
   gap: 1rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
   border-radius: 8px;
 }
 
 .gallery-item img:hover {
   transform: scale(1.05);
-  transition: transform 0.3s ease;
 }
 
-/*Gallery page*/
-.main-gallerynaro{
-  width: 900px;
-  height: 590px;
- padding: 0 3.5rem;
 
+/* Responsive Hair Style Section */
+@media (max-width: 768px) {
+  .hair-style-section {
+    padding: 3rem 1rem;
   }
 
-  .naro-gallerysubbackground{
-  background-color: #002040;
-   height: 413px;
+  .hair-style-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hair-style-card {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
-.naro-gallerybluebackground{
-   height: 79vh;
+@media (max-width: 480px) {
+  .hair-style-section {
+    padding: 2rem 1rem;
+  }
+
+  .hair-style-card {
+    padding: 1.5rem;
+  }
+
+  .hair-style-card h3 {
+    font-size: 1rem;
+  }
+
+  .hair-style-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive Gallery Section */
+/* Gallery for Tablets */
+@media (max-width: 1199px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+}
+
+/* Gallery for Mobile Devices */
+@media (max-width: 767px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .gallery-item img {
+    height: 160px;
+    border-radius: 6px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*Gallery page*/
+.naro-gallerysubbackground {
+  background-color: #002040;
+  height: 300px;
+  width: 100%;
+}
+
+.naro-gallerybluebackground {
+  height: 39vh;
   background-size: cover;
-    display: flex;
+  display: flex;
+  flex-direction: row; 
   color: white;
   align-items: center;
+  justify-content: space-between;
   gap: 0rem;
   margin: 0 1.5rem;
-  font-size: 30px
+  font-size: 30px;
+  flex-wrap: wrap;
 }
 
-.gallery-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  margin-bottom: 60px;
+
+.main-gallerynaro {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
 }
 
+.main-gallerynaro img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* === Media Queries for Tablets and Phones === */
+
+@media (max-width: 1024px) {
+  .naro-gallerybluebackground {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .naro-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-gallerynaro img {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .naro-info h1 {
+    font-size: 2rem;
+  }
+
+  .main-gallerynaro img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
+/*Pictures under Gallery Page*/
 .gallery-title {
   font-size: 2rem;
   font-weight: 800;
@@ -504,24 +954,47 @@ li {
 .gallery-images {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 5 columns on desktops */
   gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .gallery-images img {
   width: 100%;
+  height: 250px;
   object-fit: cover;
   border-radius: 6px;
-  height: 350px;
-  
+  transition: transform 0.3s ease;
 }
 
-.gallery-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid #eee;
-  font-size: 1rem;
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsives Gallery for Tablet: 3 columns */
+@media (max-width: 1199px) {
+  .gallery-images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-images img {
+    height: 220px;
+  }
+}
+
+/* Responsives Gallery for Mobile: 2 columns */
+@media (max-width: 767px) {
+  .gallery-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+  }
+
+  .gallery-images img {
+    height: 180px;
+  }
 }
 
 
@@ -669,7 +1142,6 @@ li {
   border-radius: 50%;
   padding: 0.5rem;
   transition: all 0.3s ease;
-  
 }
 
 .footer-socials img:hover {
@@ -690,35 +1162,118 @@ li {
   text-decoration: none;
 }
 
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .footer-contact,
+  .footer-center {
+    text-align: center;
+    align-items: center;
+  }
+}
 
 /* Contact Page */
-
 .contact-page {
   font-family: sans-serif;
 }
 
-.main-contactnaro{
-  width: 900px;
-  height: 590px;
- padding: 0 11rem;
+.naro-contactsubbackground {
+  background-color: #002040;
+  height: 300px;
+  width: 100%;
+}
 
+.naro-contactbluebackground {
+  height: 39vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: row; /* default desktop layout */
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0rem;
+  margin: 0 1.5rem;
+  font-size: 30px;
+  flex-wrap: wrap;
+}
+
+.naro-info {
+  flex: 1;
+  padding: 1rem;
+}
+
+.naro-info h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.main-contactnaro {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-contactnaro img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* === Media Queries for Tablets and Phones === */
+
+@media (max-width: 1024px) {
+  .naro-contactbluebackground {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 2rem 1rem;
   }
 
-  .naro-contactsubbackground{
-  background-color: #002040;
-   height: 490px;
+  .naro-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-contactnaro img {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+  }
 }
+
+@media (max-width: 600px) {
+  .naro-info h1 {
+    font-size: 2rem;
+  }
+
+  .main-contactnaro img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
+
+
+/*Contact body*/
 
 .map-container iframe {
   width: 100%;
   height: 400px;
-  }
+}
 
 .contact-content {
   display: flex;
   flex-wrap: wrap;
   padding: 5rem 3rem;
   gap: 2rem;
+  justify-content: center;
 }
 
 .contact-left {
@@ -783,28 +1338,18 @@ li {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .contact-info img {
   width: 24px;
   height: 24px;
   margin-top: 4px;
-  
-}
-
-.naro-contactbluebackground{
-   height: 79vh;
-  background-size: cover;
-    display: flex;
-  color: white;
-  align-items: center;
-  gap: 19rem;
-  margin: 0 1.5rem;
-  font-size: 30px
 }
 
 
-/* use Effect and Fetching Data */
+
+/* Blog Page */
 .blog-container {
   background-color: white;
   margin: 2rem 2rem;
@@ -816,30 +1361,79 @@ li {
 }
 
 
-
-/* Blog Page */
-
-.main-blognaro{
-  width: 900px;
-  height: 590px;
- padding: 0 38rem;
-
-  }
-
-  .naro-blogsubbackground{
+.naro-blogsubbackground {
   background-color: #002040;
-   height: 490px;
+  height: 300px;
+  width: 100%;
 }
 
-.naro-blogbluebackground{
-   height: 79vh;
+.naro-blogbluebackground {
+  height: 39vh;
   background-size: cover;
-    display: flex;
+  display: flex;
+  flex-direction: row; /* default desktop layout */
   color: white;
   align-items: center;
+  justify-content: space-between;
   gap: 0rem;
   margin: 0 1.5rem;
-  font-size: 30px
+  font-size: 30px;
+  flex-wrap: wrap;
+}
+
+.naro-info {
+  flex: 1;
+  padding: 1rem;
+}
+
+.naro-info h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.main-blognaro {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-blognaro img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* === Media Queries for Tablets and Phones === */
+
+@media (max-width: 1024px) {
+  .naro-blogbluebackground {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .naro-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-blognaro img {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .naro-info h1 {
+    font-size: 2rem;
+  }
+
+  .main-blognaro img {
+    width: 100%;
+    max-width: 350px;
+  }
 }
 
 

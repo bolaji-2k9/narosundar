@@ -100,7 +100,7 @@ export const Service = () => {
 
   return (
   <>
-   {/* About Header Section */}
+   {/* Service Header Section */}
       < div className="naro-servicesubbackground" >
         <div className="naro-servicebluebackground">
           <div className="naro-info">

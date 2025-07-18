@@ -1,5 +1,5 @@
 import React from 'react'
-import blognaroheader from '../images/main-naro-contact.jpg';
+import blognaroheader from '../images/naro-barber10.jpg';
 import blogImg1 from '../images/blog1.jpg';
 import blogImg2 from '../images/blog2.jpg';
 import blogImg3 from '../images/blog3.jpg';

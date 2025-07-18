@@ -125,7 +125,7 @@ const services = [
           <div className="naro-info">
             <h1>ABOUT</h1>
           </div>
-          <div className="main-contactnaro">
+          <div className="main-aboutnaro">
             <img src={aboutnaroheader} alt="About Naro" />
           </div>
         </div>
