@@ -496,7 +496,7 @@
 
 @media (max-width: 480px) {
   .pricing-images {
-    grid-template-columns: 1fr; /* Small phones: 1 column */
+    grid-template-columns: 2fr; /* Small phones: 2 column */
   }
 
   .about-list-item {
